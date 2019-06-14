@@ -1,13 +1,10 @@
-module.exports=function(){
-
+module.exports = function () {
     this.dbConnections = [];
-    
     this.dbConnections["slappbooksdb"] = {
-        host: "slappbooksdb.cvmlduwb8e2g.us-east-1.rds.amazonaws.com",
-        port: "3306",
-        user: "slappbooksuser",
-        password: "12345678",
-        database: "slappbooksdb",
+        host: process.env.EndPoint_rdsSlappbooksdb,
+        port: process.env.Port_rdsSlappbooksdb,
+        user: process.env.User_rdsSlappbooksdb,
+        password: process.env.Password_rdsSlappbooksdb,
+        database: "slappbooksdb"
     };
-    
-    };
+};
